@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="./index.html" id="logo">
+            <img src="/logo2.jpg" alt="logo">
+        </a>
+        <input type="search" id="search" placeholder="Search here">
+        <a id="loginLink" href="./loginSignup.html">Login</a>
+        <a href="./profile.html"><span id="usernameSpan"></span></a>
+         <!-- Placeholder for displaying username -->
+    </div>
+    
+    <div id="main"></div>
+</body>
+</html>
+<script>
+    const container=document.getElementById("main");
+    let fetchedData=[]
+    function fetchData(){
+        fetch("http://localhost:4500/food")
+        .then(res=>res.json())
+        .then(res=>{console.log(res)
+            fetchedData=res;
+            appen();
+        })
+        
+        .catch(error=>console.log(error))
+    }
+    fetchData();
+
+    function appen(){
+         container.innerHTML=fetchedData.map(item=>getCard(item)).join(" ");
+         attachButtonListeners();
+    }
+    function getCard(item) {
+    const availabilityText = item.availability ? "Available" : "Not Available";
+    const isDisabled = !item.availability; // Disable the button if not available
+    
+    return `<div class="card">
+        <img src=${item.image} alt="error"></img>
+        <h1>Name: ${item.name}</h1>
+        <p>Desc: ${item.description}</p>
+        <h3>Price: ${item.price}</h3>
+        <h3>Availability: ${availabilityText}</h3>
+        <button class="placeOrderButton" ${isDisabled ? 'disabled' : ''} data-id="${item._id}">Place Order</button>
+    </div>`;
+}
+
+
+// Sample login status (true for logged in, false for not logged in)
+const isLoggedIn = localStorage.getItem("token"); // Replace this with your actual login status check
+
+const user=localStorage.getItem("userInfo")
+const userinfo=JSON.parse(user)
+// Function to update the navigation bar based on login status
+function updateNavbar() {
+    const loginLink = document.getElementById("loginLink");
+    const usernameSpan = document.getElementById("usernameSpan");
+
+    if (isLoggedIn) {
+        // If logged in, display the username and hide the login link
+        loginLink.style.display = "none";
+        usernameSpan.textContent = userinfo.userName; // Replace with the actual username
+    } else {
+        // If not logged in, display the login link and hide the username
+        loginLink.style.display = "inline"; // or "block" depending on your styling
+        usernameSpan.textContent = ""; // Clear any previous username
+    }
+}
+
+// Call the updateNavbar function to initialize the navigation bar
+updateNavbar();
+
+const searchEl = document.getElementById("search");
+
+// Add an event listener to capture input changes
+searchEl.addEventListener("input", function () {
+    const inputValue = searchEl.value;
+    fetch(`http://localhost:4500/food/search?name=${inputValue}`)
+    .then(res=>res.json())
+    .then(res=>{
+        fetchedData=res;
+            appen();
+    })
+    .catch(error=>console.log(error))
+});
+
+function attachButtonListeners() {
+    const buyButtons = document.getElementsByClassName('placeOrderButton');
+
+    Array.from(buyButtons).forEach(button => {
+        button.addEventListener("click", () => {
+            const itemid=button.getAttribute('data-id');
+            console.log(itemid);
+            fetch(`http://localhost:4500/food/${itemid}`)
+            .then(res => res.json())
+            .then(res => {
+            // Handle the fetched data and display it in the ordererData div
+           // console.log(res);
+            handleOrderData(res);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+        });
+    });
+}
+
+
+   attachButtonListeners();
+
+//    function handleplacedOrder(itemid){
+//      // Redirect to edit.html with the user ID as a query parameter
+//   window.location.href = `profile.html?id=${itemid}`;
+//    }
+
+
+   function handleOrderData(res){
+    const payload={
+        name:res.name,
+        description:res.description,
+        price:res.price,
+        availability:res.availability,
+        image:res.image
+    }
+    fetch("http://localhost:4500/food/order/add",{
+        method:"POST",
+        headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(payload)
+    })
+    .then(res=>{
+        if(res.ok){
+            alert("Order Placed Successfully")
+        }
+    })
+    .catch(error=>console.log(error))
+   }
+
+
+</script>

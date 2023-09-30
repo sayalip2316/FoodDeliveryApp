@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="./index.html" id="logo">
+            <img src="/logo2.jpg" alt="logo">
+        </a>
+        <input type="search" id="search" placeholder="Search here">
+        <a id="loginLink" href="./loginSignup.html">Login</a>
+        <span id="usernameSpan"></span> <!-- Placeholder for displaying username -->
+    </div>
+    <div class="profile_main">
+        <div class="profile">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBUSERASFhIQFxUSFxUXFRUaFRIVGBUWFhUYFRUYHTUgGBolGxgWIjEhJSkrMC4uFx84OTQtOCgtLisBCgoKDg0OGxAQGi0lICUtLS8vLS4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLS0vLTYtLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQcCAwYEAQj/xABHEAACAQICBgYHBAULBQEAAAAAAQIDEQQhBQYSMUFRBxNhcYGRIjJCUqGxwSNicpIUMzRDslNUgpOio7PC0eLwc3SD4fE1/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAQFAQIDBv/EADMRAAIBAgMFBwMEAgMAAAAAAAABAgMRBCExBRJBcbEzUWGBocHwIjLREzRy4bLxQoKR/9oADAMBAAIRAxEAPwC8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVXrwhFynKMYrfKTSS72wDaRulNOYXDK+IxFKnyUppSfdHe/AqnpA6TasqksPgKijSj6Mq8WnKo8v1Uk7Rjw2t74W41pOpKUnKcpSk98pNuT7282cZVbZIkwwzavJ2L3x3Sro2DtDrqr+5Cy85tfAiqvTDT9jBzf4qkV8kyn4myJz/Vkdlh6aLZp9L/PBZdlX/aSeD6V8HJ2qUa8O1KMku+zv8CmIm2IVSQdCn3H6N0TrDhMT+orwk9+ze0/yPMlj8xUptNNNprNNOzT7Gd5qt0iV6LVPFXq0t23vqw7bv11359p0jV7zjPDtZxLhB5cDjKdanGpSmpwmrqSeT/07j1HYjAAAAAAAAAAAAAAAAAAAAAAAAAAiNadLxweDrYlq/VQbivem8oR8ZNAJXyOc6QukGlo9dVSUamLkrqL9SknulUs790Vm+wo3Ten8XjJ7eJrzm96i21CP4YLKJ4MZi6lapOrVk5VKsnOUnxbd34dhv0Vo2tiKipUKcpzedluS4uTeUV2siTm5FlTpKC8TTE2xOvj0ZY/Yvt4fa9zbnf8ANsWOXxmDq0ajpVoShUjvjLer7nyafNZGh0MImyJribIgG2Jtiaom2JkwbImyJribIgHUala0TwVW0m3h5v04e79+K5r4l3YerGcVOElKMkpJrc0800fmxFn9FOn21LB1H6qc6V+XtQ+q8TtSlwI2Ip3W8iyQAdyGAAAAAAAAAAAAAAAAAAAAACt+nXEuOjYQX72vTi+5RqT+cUWQVh0+fsOH/wC5X+DVNZ/azpS7RcyjF/zn4F76j6vLBYZRkl19W06suN+EL8op277viVh0caLVfSFPaV4UE68lwbjZQX53F/0S8LkNlkZXOe1w1bhjaNlZV6d3Sm/jCT91/B2ZP3FzUH56nTlGTjKLjKLcZRe+LWTT7bmUS1dcNTY4p9dRcYYi3pX9StZWW1b1ZJZbXnzVc6Q0PicO/tqE4Je01eHhOPo/E2B5Ym2JppyT3NM3RMmDZE2RNcTZEAzRIaGx8sPXp1o76UlLvXtLxV14kejNAa6n6RpVFKKkndSSafNNXRsIHUjFdZo+hJ71DY/I3D6E8TE75lW1Z2AAMmAAAAAAAAAAAAAAAAAAAV3050NrRal/J16UvNTh/mLEOP6WMPt6IxP3FCp+WcX8rms/tZvSdprmVz0N4bLE1ebp0l4KU5fxR8iybnE9E1O2AlL361T+zGEfodncgvUtEZ3FzC4uYMmdz6pGu4uAaK+j6E/Xo0pd9OD+aPO9A4P+a0P6uH+h77i5kxYj3oHB/wA1o/1cfojxYvU/BT9WnKm+cJy/hk2vgTtxcCxW+nNVK2HTnF9ZSWbklaUF96N93avgQSLluV3rjodUKqnTVqda+XCE1nJLse9ePI2TMNFjdF8r6OiuU6i/tX+p1xyfRjC2jab96VR/23H6HWEyH2orKv3vmAAbGgAAAAAAAAAAAAAAAAAAIvWbCddgsRS/laNWHi4NL4kofGgCpOjFW0ZS+9Ks/wC9kvodTciNV8G6GH6l/uq2Kh4LE1Un5WJW5XSybLhO6uZXFzG4uYuZMri5jcXFwZXFzG4uLgyuLmNxcXBlcg9dKalg5N74ShJd99n5Nk1cjNYMM6tKNFb61WlT85q/wTMrUw9DrtTsN1eAw8ePVxk++XpfUmjCnBRSit0Uku5bjMsUrZFQ3d3AABgAAAAAAAAAAAAAAAAAAAAA5PS1FQrSSWUnt+Ms38bnjuTWstH1Z/0X819SDuV9VWmy2oPeppmVxcxuLnM6mVxcxuLgGVxcxuLgGVxcxuLgGVyR0JhYzqqT/demvxNOK+EmRlzo9XqNqbl7z+C/4zrRV5o4YiW7TZLgAnlWAAAAAAAAAAAAAAAAAAAAAAAAeTSWH6ylKPHeu9HHM7w5bT+D2J7aXoz+D4kXEw/5E3CVNYMjLi5hc+3IhPMri5jcXAMri5jcXAMri5jc+XANtGDlJRW+Tsdrh6ahFRW6KSIPV3BZ9bJdkfqzoSbh4WW8+JXYupeW6uHUAAkEQAAAAAAAAAAAAAAAAAAAAAAAAGjFYeNSDhLc/h2m8DUynbNHC4zDypTcJb18VwNB69bJtYm692PjvI+nUT3eRVzVpNF1TblBPwNoPgNTY+g+AA+nt0VgZVp29les/p3kZVqpd/L/AFOn1Pk3Sm37/wBEdKUVKaTOVebhByROU4KKUUrJZI2AFkU4AAAAAAAAAAAAAAAAAAAAAAAAANVWpGMXKUlGKzbbsku1sA2mipXSkoJrbkm0uxb2+w5HTOuav1WDj1lSb2VO2W08lsRfrPtyXeTWr+j50IPrZ7detac5vi7WUF2R+rJM8NKnDfqZX0XF+L7kvXh3rhGvGct2GdtXw5eL6ce56dYNB9ausp/rIrc3+sX0f/O7koxz4prJrc0yziC07oRVftKdlVXlUXJ8nyfn2V1ajvfUtepZYfEbn0y06HJxqPjmZ9YYLe001JZNPenxMtkgFpkfXU7DXKb7jPZPkuCSvKWSS3tvcBkedxzSSu27JLe29yXadvoDRs6NL0penJ7Tj7McvV7+01aB0IqX2lSzqvhwpp8Fzfb5ds8T6NHczepV4nEfqfTHTqYQnfvW9cjMhdP4SpViv0eexiKfpwnw/BLg4y5O6yvwIPQ+vUNp0sZDqasHstpPY2lk9pb45967Swp4adWG/TV7aparxtxXitOJWzrxhJRnlfR8OV+D5+Xcu2Bqo1YzipQkpRlmmmmmuxo2kc7gAAAAAAAAAAAAAAAGurUjFOUpJRWbbdku9s5jSmu2Hp3VJOrJcV6ML/iaz8EdKVGpVdoK5zqVYU1eTsdWR+kdLUKCvWqxjxtvk+6KzfkVvpLWzGVrrrOri/Zjl5y9b4kDJ534vNvm+0tKWyW+0lbwX5/2V9XaUVlTV+fy/Q7vSev8Vlh6V/vzyXhFb/Fo47Smlq+Id61SUrZpboruisvHeeNncai6tX2cVWWSzpRfP332cl48ic4YfBQ30s/Vvnw8rIhqdfFz3G8vRL54/wDhI6k6tdRHrqsftprKL/dRf+Z8eW7mdTiV6LfGKbT5NLI3Gusrxa5p/I89WrSq1N+WvzIvKdKNOG5HQxw9bbjfjua5M3EVg6mzJcpJJ9/svzy8SVNJqzNou6IHWDQ3WrrKeVWP94lwfbyfh3ckq0lk47ss00/E67WvTscHQc8nUn6NOPOWSu/uq93/AOyn54iTlKbk3ObcpSdrybzbdjtS2TLFpzUt3yvf1WneJbWjhWoSW952sdn10nko5vLi/I6vV7Q3VLrKivVmt38mnw7+b8O+oI15KSntNSg1KMla8WndNX7S4NUtPRxlDayVWn6FSPKXvL7r3rxXAVtkSwkVNy3vK1vV695iO1o4punFbvN6/PmhPGnE1tmN+LyS5s3EXiqm1Psj6K7/AGn9PBnGKuzMnZHrwLbgm827tvm7/wDw5XXrVb9Ig69GP28FnFfvYrh+JcOe7lbq8Evs4fhT81c9B0pVp0au/B5r5Y0qUo1YbktChtFaYxGGd6FWUL5tb4y/FF5P5nb6K6R45RxNG336buvGD3eDZq6QtVvWxdBdtaC+NRfXz5lfHpVDDY6n+o45+qfPj53RQudfBz3L5ejXt5WL10ZprDYhfY1oyfu7pLvhLNeRJn53T48Vmux9h0Wi9dMbQsut6yK9mfpeT9b4lfW2LJZ0pX8Hl6/6JtLasXlUjbxX416lzA4zQ/SDhqto1oulJ8/Sh5pXXijrqNWM4qUJKUXmmmmn3NFTWoVKLtUi189fIsqdaFRXg7/PmptAByOgAAAOf1i1lpYVbKW3WauoXyj2zfDu3s9msWkv0fDyqe1lGK5yeS8s34FSVqspScpNuUndt72+bLDA4NVvqn9q9SDjMS6X0x16Hs0rpeviJXqzbW9R3Rj3R+u8jjJmLL+MVFWSsimk3J3bzPh8PrPhtc0sTWqWhlisQoyX2VNbc/vK/orxd/BMtqCSVkrJZW5FUao6zQwdSUasG6VVRblFXlBq/DjHPhn3lm4DH0a8dujUjOPOLTt2Nb0+xlBtN1HV+pfStPcu9nqCp5avX29D2AArSeQsI+il2WJCOKiqTqTaSgm5N7ls733cTySVm+xy+bPJpDBqtB0pt9VNxc4p221HNRbWai3a/NRtxZIaUrXOKdjgsbh8VpSdXFJONGEZdUms5qF3GFNcW2vSlzdle2XKKoXhCKSSiklGySSskluSS3IqbWbC0/0yt1aUYqbVksrpJSaXC8tp+JdYKvKpJwSsklZdy7vF/wBlTi6KglJvNvPxbzIdzOl0VTxWjnRxmy5UKqTqJJ3jCbvs1Fwys1LdfJ24weFw8Yzi5ekotNprJpSTaa4poumpBNNNJxd001k0+DXKxtja0qVotXTvdd67vUxhKUal5J5q1vD5Y9rxcXSVSDTjNJwfB7S9F92dyPlku5Hn0fglRh1UG+qjKUoRefV7W+Kfur0rctq3BHokr5e81HzdvqUaio6Fs5XJejG0UuSS+BmARzuYtXye5lM676DWExNoL7GsnOH3fej4NrwaLc0hpGjQht16sKcecmlfsS4vsRUmu2tdPG1YQowfVUdpqclaU3LZvaPsxy45vsLXZDqKteK+l693h87myu2koOlm81p7/ORzgAPSlACS0NpzEYWW1RqOKbu474y/FH67+0jQYlFSW7JXRmMnF70XZlx6ra2UsYtiS6uulnC+Uubg+PdvXxOnPzvRqyhJThJxlFqSa3prc0Xdqppf9KwsKrtt+pNLcpxtfLhe6du081tHAqh9dP7X6P8AD4F9gcY6y3J/cvX+yaABVlicJ0kYh3o0r5WlUfa8lH5S8zimdb0jwfX03wdO3lJ3+aOSPR4KyoRt8zKLF51pfOCMT4ZGDJdyLYGLPrPhm5gwnBPea6SqU5bdKcoyXtRk4y80bz36G0NXxU9mlHJetN32Yd759izMTlFRblobQUm7R1JzVLW3Gzr08PUiqym7OVrThFb5trJpdq5Z3LLIfV/QVLCQ2YZzl603bal2dkVwRMHmcTUpzqXpqy6+J6DDwnGFpu7I6vG05dtn8EvozWejGR9JPmmvLNfNmg1i8hLUxbSze5ZvuW8p2vWc5Sm9825fmbf1LU1hr9XhK0vuSiu+XoL4yRU5dbKjlKXJe/4KraMs4x5v2/J8ki3tG1uso05+/ThLxcU38SoWyzdTq+3gaX3dqH5ZyS+Fjfasb04vufVf0a7OdpyXev69yYM6Ebzj338k387GJ6MDH02+St5v/aijk7It4rM95Veu+uuOpYiphqUFRUN07bU5xe6ab9FJ93PMtQhNY9XqOMp7NRWnH1KittQf1jzXyeZthalKFS9WN108bcfnExiITlBqm7Moqv1tWW3WqTnJ+1KTlLze4yhBLciW0/oHEYOezWj6L9Wor7E+58H2PP5kTc9ZCUZRTg8uFjzVRTUmp6mYMLi5vc5mYMLi4uDMsHolxj2q9HhaNRLtT2ZfOJXdzuOiaDeKqy4RpOL75TptfJkPaCUsNO/d7omYFtYiNvHoWsADyZ6Q4PpN9bD91X50zigD0OB7CPn1ZR4zt5eXRHw+AEsjGLDANkDBlr6h/sMO+f8AEwCu2p2K5om7O7R8vwdCACiLg8uO9nvf8LPOwDrDQ5y1IHXb9hqf+P8AxYFaMAv9mdi/5PpEpNodqv4rqzXW9UsTo9/Yl/1Kn+UA32l+3/7LozXZ/bP+PujpT1aP9rvX8KAPPT+0vI6nsABxOpzPSJ/+dV/ofxopcA9FsjsXz9kUm0+1XL3YABaFaAAACwuiD18R+Gl85gELaP7Wfl/kiXgf3EPP/FlmAA8seiP/2Q==" alt="err">
+            <h1 id="name"></h1>
+            <h3 id="email"></h3>
+            <button id="logout">Log Out</button>
+        </div>
+        <div id="ordererData"></div>
+    </div>
+</body>
+</html>
+<script>
+    // Sample login status (true for logged in, false for not logged in)
+const isLoggedIn = localStorage.getItem("token"); // Replace this with your actual login status check
+
+const user=localStorage.getItem("userInfo")
+const userinfo=JSON.parse(user)
+// Function to update the navigation bar based on login status
+function updateNavbar() {
+    const loginLink = document.getElementById("loginLink");
+    const usernameSpan = document.getElementById("usernameSpan");
+
+    if (isLoggedIn) {
+        // If logged in, display the username and hide the login link
+        loginLink.style.display = "none";
+        usernameSpan.textContent = userinfo.userName; // Replace with the actual username
+    } else {
+        // If not logged in, display the login link and hide the username
+        loginLink.style.display = "inline"; // or "block" depending on your styling
+        usernameSpan.textContent = ""; // Clear any previous username
+    }
+}
+
+// Call the updateNavbar function to initialize the navigation bar
+updateNavbar();
+
+
+
+    const card1=document.getElementsByClassName("profile")
+    const nameEl=document.getElementById("name")
+    const emailEl=document.getElementById("email")
+
+    nameEl.innerText=`Username: ${userinfo.userName}`;
+    emailEl.innerText=`Email: ${userinfo.email}`;
+    
+    const logoutButton = document.getElementById("logout");
+
+    logoutButton.addEventListener("click",()=>{
+        handleLogout()
+    })
+
+    function handleLogout(){
+    localStorage.removeItem("token");
+    localStorage.removeItem("userInfo");
+    window.location.href = "./index.html";
+    }
+
+
+    
+    //console.log(itemId)
+   
+    const containerEl=document.getElementById("ordererData");
+
+    let fetchedData=[]
+    function fetchData(){
+        fetch("http://localhost:4500/food/order/get")
+        .then(res=>res.json())
+        .then(res=>{console.log(res)
+            fetchedData=res;
+            appen();
+        })
+        
+        .catch(error=>console.log(error))
+    }
+    fetchData();
+
+    // ...
+
+// ...
+
+function appen() {
+    containerEl.innerHTML = fetchedData.map(item => getCard(item)).join(" ");
+
+    // Add event listeners to the "Delivered" buttons
+    const deliveredButtons = document.querySelectorAll(".order_card button");
+    deliveredButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Change the text inside the clicked button to "Delivered"
+            button.textContent = "Delivered";
+            
+            // Add the "button-delivered" class to change the button's style
+            button.classList.add("button-delivered");
+        });
+    });
+}
+
+function getCard(item) {
+    return `<div class="order_card">
+        <img src=${item.image} alt="error"></img>
+        <h1>Name: ${item.name}</h1>
+        <p>Desciption: ${item.description}</p>
+        <h3>Price: ${item.price}</h3>
+        <button class="button-pending">Pending</button> <!-- Initially set to "Pending" -->
+    </div>`;
+}
+
+// ...
+
+// ...
+
+
+
+</script>

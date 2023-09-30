@@ -1,0 +1,140 @@
+body{
+    margin: 0px;
+    padding:0px;
+    background-color:rgb(250, 195, 173);
+}
+#main{
+    width:90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+}
+.card{
+    width:95%;
+    text-align: center;
+    border:1px solid gray;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+.card>img{
+    width:90%;
+    display: block;
+    margin: auto;
+    height:200px;
+}
+#navbar{
+    width:100%;
+    height:100px;
+    display: flex;
+    margin: auto;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+    box-sizing: border-box;
+    background-color: chocolate;
+    margin-bottom: 20px;
+}
+#logo>img{
+    width:120px;
+    height:99px;
+    margin-top: 5px;
+}
+#navbar>input{
+    width:50%;
+    height:50%;
+    margin: auto;
+    border-radius: 5px;
+    background-color:beige;
+}
+#navbar>a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.placeOrderButton {
+    padding: 10px;
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.placeOrderButton[disabled] {
+    background-color: gray; /* Change the background color to gray when disabled */
+    color: white; /* Change the text color to white when disabled */
+    cursor: not-allowed; /* Change the cursor to not-allowed when disabled */
+}
+
+#usernameSpan{
+    font-size: 20px;
+}
+
+.profile_main{
+width:90%;
+margin: auto;
+display: flex;
+gap:10px;
+}
+.profile{
+    width:30%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: antiquewhite;
+}
+.profile>button{
+    padding:10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+}
+
+#ordererData{
+    width:70%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:15px;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+.order_card{
+    width:90%;
+    margin: auto;
+    padding: 20px;
+    border:1px solid gray;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.order_card>img{
+    width:90%;
+    height:250px;
+    border-radius: 5px;
+}
+.order_card>button{
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(210, 120, 55);
+}
+
+.button-pending {
+    background-color: yellow; /* Change to your desired color */
+    color: black; /* Change to your desired text color */
+}
+
+/* Define the style for the button after it's clicked (Delivered) */
+.button-delivered {
+    background-color: green; /* Change to your desired color */
+    color: white; /* Change to your desired text color */
+}
