@@ -133,13 +133,16 @@ function attachButtonListeners() {
     fetch("http://localhost:4500/food/order/add",{
         method:"POST",
         headers:{
-                "Content-Type":"application/json"
+                "Content-Type":"application/json",
+                "Authorization":`Bearer ${localStorage.getItem("token")}` 
             },
             body:JSON.stringify(payload)
     })
     .then(res=>{
         if(res.ok){
             alert("Order Placed Successfully")
+        }else{
+            alert("Please login first")
         }
     })
     .catch(error=>console.log(error))

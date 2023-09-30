@@ -1,7 +1,8 @@
 const express=require("express");
 const FoodRouter=express.Router();
 const {FoodModel}=require("../model/food.model");
-const {OrderModel}=require("../model/order.model")
+const {OrderModel}=require("../model/order.model");
+const {auth}=require("../middleware/auth.middleware")
 
 FoodRouter.post("/add",async(req,res)=>{
       try {
@@ -58,7 +59,7 @@ FoodRouter.get("/:id",async(req,res)=>{
   }
 })
 
-FoodRouter.post("/order/add",async(req,res)=>{
+FoodRouter.post("/order/add", auth,async(req,res)=>{
   try {
     const order=new OrderModel(req.body)
     await order.save();
